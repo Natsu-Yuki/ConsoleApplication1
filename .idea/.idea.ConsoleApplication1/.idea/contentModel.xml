@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ynats\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ConsoleApplication1.-877894287.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ynats\Documents\Visual Studio 2012\Projects\ConsoleApplication1" t="IncludeFlat">
+      <e p="ConsoleApplication1" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
+        <e p="ExtendedMethod.cs" t="Include" />
+        <e p="GAD_List_Array.cs" t="Include" />
+        <e p="Location.cs" t="Include" />
+        <e p="MySql.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SortingAlgorithm.cs" t="Include" />
+      </e>
+      <e p="ConsoleApplication1.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
