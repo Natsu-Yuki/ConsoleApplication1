@@ -6,14 +6,16 @@ namespace ConsoleApplication1
     {
         public static void Main()
         {
-            
-            MySql mySql = new MySql();
-            //mySql.ExeMySql("insert into student value ('s003','司马懿');");
-            var dataReader =  mySql.GetSqlDataReader("select * from student;");
-            while (dataReader.Read())
+
+            Bst<int> bst =new Bst<int>();
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(dataReader.GetString(0)+dataReader.GetString(1));
+                bst.Add(i);
             }
+
+            Console.WriteLine(bst.Contains(1));
+            Console.WriteLine(bst.Contains(10));
+            
         }
     }
 }

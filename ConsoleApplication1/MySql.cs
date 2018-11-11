@@ -3,18 +3,18 @@ using MySql.Data.MySqlClient;
 
 namespace ConsoleApplication1
 {
-    public class MySql
+    public static class MySql
     {
-        public  MySqlConnection GetMySqlConnection()
+        public  static MySqlConnection GetMySqlConnection()
         {
             string mysql = "server=localhost;user id=root;password=123456;database=natsusql";
             MySqlConnection mySqlConnection = new MySqlConnection(mysql);
             return mySqlConnection;
         }
 
-        public void ExeMySql(string mysql)
+        public static void ExeMySql(string mysql)
         {
-            MySqlConnection mySqlConnection = this.GetMySqlConnection();
+            MySqlConnection mySqlConnection = GetMySqlConnection();
             mySqlConnection.Open();
             MySqlCommand mySqlCommand = new MySqlCommand(mysql,mySqlConnection);
 
@@ -25,13 +25,40 @@ namespace ConsoleApplication1
 
         }
 
-        public MySqlDataReader GetSqlDataReader(string mysql)
+        public static MySqlDataReader GetSqlDataReader(string mysql)
         {
-            MySqlConnection mySqlConnection = this.GetMySqlConnection();
+            MySqlConnection mySqlConnection = GetMySqlConnection();
             MySqlCommand mySqlCommand = new MySqlCommand(mysql,mySqlConnection);
             mySqlConnection.Open();
             MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
             return mySqlDataReader;
         }
     }
+    
+    
+    
+    /*
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+        MySql mySql = new MySql();
+            mySql.ExeMySql("insert into student value ('s003','司马懿');");
+            var dataReader =  mySql.GetSqlDataReader("select * from student;");
+            while (dataReader.Read())
+            {
+                Console.WriteLine(dataReader.GetString(0)+dataReader.GetString(1));
+            }
+     *
+     *
+     *
+     * 
+     */
 }
